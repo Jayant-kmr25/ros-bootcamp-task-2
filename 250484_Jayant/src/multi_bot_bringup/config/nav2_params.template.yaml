@@ -1,13 +1,3 @@
-# Nav2 parameters for ONE namespaced TurtleBot3 Waffle.
-# "<ns>" is substituted with the robot namespace (e.g. tb3_0) by the launch file.
-# Localisation comes from slam_toolbox (<ns>/map -> <ns>/odom), so no AMCL here.
-# All TF frames are explicitly prefixed because every robot shares one global /tf tree.
-#
-# Global planning happens in the shared "map" frame on the MERGED grid (/map),
-# so a robot can plan into territory the other robot mapped - that is the whole
-# point of merging. Everything reactive (local costmap, recovery behaviours)
-# stays in this robot's own <ns>/odom frame so it never depends on the merge.
-
 bt_navigator:
   ros__parameters:
     use_sim_time: true
